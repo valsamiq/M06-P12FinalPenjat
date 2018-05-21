@@ -1,0 +1,45 @@
+<html>
+    <head        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+        <style>
+            div{display: inline-block;}
+            mainContent{width: 100%;}
+            imageSize{width: 100%;}
+        </style>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <div class="row" style="margin-top: 50px; text-align: center">
+            <div class="col-sm-offset-4 col-sm-8 mainContent">
+                <div class="col-sm-12">
+                    <div class="btn btn-primary" id="startBtn">Start</div>
+                    <div>
+                        <form name="tryLetter" onsubmit="return sendTry()">
+                            <input  type="text" required placeholder="Letter" name="letterField" maxlength="1" style="width: 40px;"/>
+                        </form>
+                        <div class="btn-group" role="group">
+                            <input onclick="sendTry()" type="submit" class="btn btn-secondary" value="Send"/>
+                            <input onclick="reset()" type="submit" class="btn btn-secondary" value="Reset"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div style="width: 400px;">
+                        <div style="display: inline-block; width: 100%;" id="showStatus"></div>
+                    </div>
+                    <div class="thumbnail" style="position: absolute; width: 400px;">
+                        <img class="imageSize" src="images/HeadShot1.jpg" style="position: absolute" id="img1">
+                        <img class="imageSize" src="images/HeadShot2.jpg" style="position: absolute" id="img2">
+                        <img class="imageSize" src="images/HeadShot3.jpg" style="position: absolute" id="img3">
+                        <img class="imageSize" src="images/HeadShot4.jpg" style="position: absolute" id="img4">
+                        <img class="imageSize" src="images/HeadShot5.jpg" style="position: absolute" id="img5">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="controller.js" type="text/javascript"></script>
+    </body>
+</html>
